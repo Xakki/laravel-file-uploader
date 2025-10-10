@@ -1,0 +1,46 @@
+{
+    "name": "xakki/laravel-file-uploader",
+    "version": "0.1",
+    "description": "Chunked file uploader package for Laravel 10+.",
+    "type": "library",
+    "license": "Apache-2.0",
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^10.0|^11.0",
+        "illuminate/filesystem": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0",
+        "illuminate/validation": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xakki\\LaravelFileUploader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xakki\\LaravelFileUploader\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xakki\\LaravelFileUploader\\Providers\\FileUploaderServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^8.17",
+        "phpunit/phpunit": "^10.5",
+        "phpstan/phpstan": "^1.11",
+        "larastan/larastan": "^2.9",
+        "laravel/pint": "^1.14"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "cs-fix": "vendor/bin/pint",
+        "cs-check": "vendor/bin/pint --test",
+        "phpstan": "vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --memory-limit=512M"
+    }
+}
